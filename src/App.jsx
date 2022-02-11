@@ -1,5 +1,5 @@
 import React from "react";
 import { Tables } from "components";
-import "./App.css";
+import "./App.scss";
 
 export const App = () => <Tables />;

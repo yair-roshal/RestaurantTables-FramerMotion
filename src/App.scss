@@ -42,34 +42,48 @@
 .animate-table {
     display: inline-block;
     margin: 0 0.5rem;
-    animation: bounce;
-    animation-duration: 2s;
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    cursor: pointer;
 }
 
 .animate-table:hover {
-    animation: animate__heartBeat;
-    animation-duration: 2s;
+    /* animation: pulse; */
+    animation-duration: 1s;
 }
 
-.animate__animated.animate__bounce {
+
+/* .animate__animated.animate__bounce {
     --animate-duration: 2s;
     --animate-delay: 2s;
-}
+} */
 
-#piece {
+
+/* #piece {
     position: absolute;
     top: 100px;
     left: 50%;
-    /* --------------task-7+++ */
     transition: all 1s linear;
-}
+} */
 
 #table1 {
     background: lightblue;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    /* shape-outside: url("./img/moon.png"); */
+    span {
+        background: #C76637;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+.table1 span :hover {
+    box-shadow: 2px 2px white, 4px 4px #C76637;
+    top: -4px;
+    left: -4px;
 }
 
 #table2 {
@@ -91,4 +105,16 @@
     height: 55px;
     background: rgb(230, 175, 221);
     position: relative;
+    background: white;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 50px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#table4 :hover {
+    box-shadow: 2px 2px white, 4px 4px #6d76c7;
+    top: -4px;
+    left: -4px;
 }
