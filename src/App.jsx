@@ -1,10 +1,5 @@
-import React from "react" 
-// import {Tables} from 'components';
-import {Tables} from "./components/Tables";
-import './App.css';
+import React from "react";
+import { Tables } from "components";
+import "./App.css";
 
-
-export const App = () => (
-  <Tables />
-)
- 
+export const App = () => <Tables />;

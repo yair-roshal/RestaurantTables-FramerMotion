@@ -8,7 +8,5 @@
     { "table": 301, "diners": 3, "concat": [] },
     { "table": 302, "diners": 3, "concat": [501] },
     { "table": 401, "diners": 4, "concat": [402] },
-    { "table": 402, "diners": 4, "concat": [401] },
-    { "table": 501, "diners": 5, "concat": [302] },
-    { "table": 601, "diners": 6, "concat": [203] }
+    { "table": 402, "diners": 4, "concat": [401] }
 ]

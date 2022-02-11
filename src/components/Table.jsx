@@ -1,7 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect,useMemo } from "react";
 import Box from "@mui/material/Box";
 import * as React from "react";
-import Paper from "@mui/material/Paper";
 import "animate.css";
 
 // const icon = (
@@ -22,15 +21,37 @@ import "animate.css";
 
 export function Table(props) {
   const { table, diners } = props;
-  const element = document.querySelector(".my-element");
+  const element = document.querySelector(".animate-table");
+
+ let figure=""
+    switch (diners) {
+      case 1:
+        figure = "table1";
+        break;
+      case 2:
+        figure = "table2";
+        break;
+      case 3:
+        figure = "table3";
+        break;
+      default:
+        figure = "table4";
+        break;
+        return figure
+    }
+ 
+
   return (
-    <Box sx={{ height: 180 }}>
-      {table}-{diners}
-      {/* {icon} */}
-      {/* <div id="hexagon"/>  */}
-      <div className="my-element"> 121212</div>
-      {element.classList.add("animate__animated", "animate__bounceOutLeft")}
-      {document.documentElement.style.setProperty('--animate-duration', '2s')}
+    <Box> 
+      <Box sx={{ height: 180 }}>
+         {table}-{diners}
+           {/* <div id={figure} className="animate-table" /> */}
+           <img src="/src/img/moon.png" id={figure} className="animate-table"/>
+        {/* {element.classList.add("animate__animated", "animate__bounceOutLeft")} */}
+  
+        {/* {document.documentElement.style.setProperty("--animate-duration", "2s")} */}
+     
+      </Box>
     </Box>
   );
 }
