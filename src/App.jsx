@@ -1,8 +1,8 @@
 import React from "react" 
-import {DropdownAman} from './DropdownAman';
+import {Tables} from './Tables';
   
 export const App = () => (
-  <DropdownAman />
+  <Tables />
 )
 
 export default App
