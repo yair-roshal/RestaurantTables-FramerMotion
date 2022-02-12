@@ -43,7 +43,7 @@ export function Table(props) {
     <Box>
       <Box sx={{ height: 180 }}>
         {table}-{diners}
-         <Box id={figure} className="animate-table"></Box>
+         <div id={figure} className="animate-table"></div>
       </Box>
     </Box>
   );

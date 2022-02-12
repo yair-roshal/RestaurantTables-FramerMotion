@@ -46,14 +46,18 @@
     animation-duration: 1s;
     // animation-delay: 1s;
     cursor: pointer;
+    border-color: #6d76c7 !important;
+    box-shadow: 0 14px 28px rgba(201, 53, 144, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .animate-table:hover {
-    // box-shadow: 2px 2px white, 4px 4px #6d76c7;
+    transition: all 1000ms linear;
     top: -4px;
     left: -4px;
-    transition: all 500ms linear;
-    box-shadow: 0 0 0 2px #D2973D inset, 0 0 0 4px white inset;
+    box-shadow: 0 0 0 2px #42d23d inset, 0 0 0 4px white inset;
+    border-color: #2e3469 !important;
+    background: #2e3469 !important;
+    box-shadow: 0 14px 28px rgba(53, 201, 115, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 // .animate__animated.animate__bounce {
@@ -61,28 +65,36 @@
 //     --animate-delay: 2s;
 // }
 #table1 {
-    background: lightblue;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    background: #c76637;
     position: relative;
     top: 0;
     left: 0;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(201, 53, 144, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: url(/img/moon.png) no-repeat center center;
+    background-size: cover;
 }
 
 #table1 :hover {
     // box-shadow: 2px 2px white, 4px 4px #c76637;
     top: -4px;
     left: -4px;
-    box-shadow: 0 0 0 2px #D2973D inset, 0 0 0 4px white inset;
+    box-shadow: 0 0 0 2px #d2973d inset, 0 0 0 4px white inset;
 }
 
 #table2 {
     background: lightblue;
     width: 100px;
     height: 100px;
+    // -webkit-transition: background-color 2s ease-out;
+    // -moz-transition: background-color 2s ease-out;
+    // -o-transition: background-color 2s ease-out;
+    // transition: background-color 1s ease-out;
+}
+
+#table2 :hover {
+    // background-color: rgba(230, 173, 204, 0.418);
 }
 
 #table3 {
@@ -108,33 +120,6 @@
 
 #table4 :hover {
     box-shadow: 2px 2px white, 4px 4px #6d76c7;
-    top: -4px;
-    left: -4px;
-}
-
-.span-shadow {
-    text-align: center
-}
-
-.span-shadow span {
-    display: inline-block;
-    margin: 15px;
-    padding: 20px 30px;
-    cursor: pointer;
-    border-radius: 10px;
-    color: white;
-    transition: .2s linear;
-}
-
-.span-shadow span {
-    background: #C76637;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
-.span-shadow span :hover {
-    box-shadow: 2px 2px white, 4px 4px #C76637;
     top: -4px;
     left: -4px;
 }

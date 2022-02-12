@@ -22,14 +22,6 @@ const BouncyDiv = styled.div`
 export function Tables() {
   return (
     <Container maxWidth="sm">
-      <p className="span-shadow">
-        <span>ЭФФЕКТ 4</span>
-      </p>
-
-      <BouncyDiv style={{ width: "50px", height: "50px", background: "red" }} />
-      <Mana />
-      <Icon />
-
       <Box
         sx={{ display: "flex", flexWrap: "wrap", width: "500", height: "500" }}
       >
@@ -37,6 +29,10 @@ export function Tables() {
           return <Table key={key} table={value.table} diners={value.diners} />;
         })}
       </Box>
+
+      <BouncyDiv style={{ width: "50px", height: "50px", background: "red" }} />
+      <Mana />
+      <Icon />
     </Container>
   );
 }
