@@ -37,14 +37,13 @@ export function Table(props) {
     default:
       figure = "table4";
       break;
-      return figure;
-  }
+   }
 
   return (
     <Box>
       <Box sx={{ height: 180 }}>
         {table}-{diners}
-        <Box id={figure} className="animate-table"></Box>
+         <Box id={figure} className="animate-table"></Box>
       </Box>
     </Box>
   );

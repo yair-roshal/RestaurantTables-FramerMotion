@@ -44,46 +44,39 @@
     margin: 0 0.5rem;
     animation: fadeIn;
     animation-duration: 1s;
-    animation-delay: 1s;
+    // animation-delay: 1s;
     cursor: pointer;
 }
 
 .animate-table:hover {
-    /* animation: pulse; */
-    animation-duration: 1s;
+    // box-shadow: 2px 2px white, 4px 4px #6d76c7;
+    top: -4px;
+    left: -4px;
+    transition: all 500ms linear;
+    box-shadow: 0 0 0 2px #D2973D inset, 0 0 0 4px white inset;
 }
 
-
-/* .animate__animated.animate__bounce {
-    --animate-duration: 2s;
-    --animate-delay: 2s;
-} */
-
-
-/* #piece {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transition: all 1s linear;
-} */
-
+// .animate__animated.animate__bounce {
+//     --animate-duration: 2s;
+//     --animate-delay: 2s;
+// }
 #table1 {
     background: lightblue;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    span {
-        background: #C76637;
-        position: relative;
-        top: 0;
-        left: 0;
-    }
+    background: #c76637;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.table1 span :hover {
-    box-shadow: 2px 2px white, 4px 4px #C76637;
+#table1 :hover {
+    // box-shadow: 2px 2px white, 4px 4px #c76637;
     top: -4px;
     left: -4px;
+    box-shadow: 0 0 0 2px #D2973D inset, 0 0 0 4px white inset;
 }
 
 #table2 {
@@ -115,6 +108,33 @@
 
 #table4 :hover {
     box-shadow: 2px 2px white, 4px 4px #6d76c7;
+    top: -4px;
+    left: -4px;
+}
+
+.span-shadow {
+    text-align: center
+}
+
+.span-shadow span {
+    display: inline-block;
+    margin: 15px;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
+}
+
+.span-shadow span {
+    background: #C76637;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.span-shadow span :hover {
+    box-shadow: 2px 2px white, 4px 4px #C76637;
     top: -4px;
     left: -4px;
 }

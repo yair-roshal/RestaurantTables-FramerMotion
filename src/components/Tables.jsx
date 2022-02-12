@@ -2,18 +2,34 @@ import { useState, useRef, useEffect, useMemo } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { Table } from "components";
+import { Mana } from "components";
+import { Icon } from "components";
 import floor from "../data/floor.json";
 import "animate.css";
 
+import styled, { keyframes } from "styled-components";
+import { bounce } from "react-animations";
+
+const bounceAnimation = keyframes`${bounce}`;
+
+const BouncyDiv = styled.div`
+  animation: 1s ${bounceAnimation};
+  /* width: "50px";
+  height: "50px";
+  background: "red"; */
+`;
+
 export function Tables() {
-  // const [checked, setChecked] = useState(false);
-
-  // const handleChange = () => {
-  //   setChecked((prev) => !prev);
-  // };
-
   return (
     <Container maxWidth="sm">
+      <p className="span-shadow">
+        <span>ЭФФЕКТ 4</span>
+      </p>
+
+      <BouncyDiv style={{ width: "50px", height: "50px", background: "red" }} />
+      <Mana />
+      <Icon />
+
       <Box
         sx={{ display: "flex", flexWrap: "wrap", width: "500", height: "500" }}
       >
