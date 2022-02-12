@@ -1,0 +1,110 @@
+html,
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(250deg, #7b2ff7, #f107a3);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.wrapper,
+.table {
+     margin: 5px;
+    padding: 0;
+}
+
+.wrapper {
+    width: 800px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.table {
+    background-color: rgba(214, 214, 214, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.table:last-child {
+    margin-bottom: 0px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #666;
+    border-radius: 20px;
+}
+
+.row {
+    width: 100%;
+    height: 8px;
+    background-color: #999;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+// .close {
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 40px;
+//     position: relative;
+//     z-index: 1;
+//     margin: 20px auto;
+//     cursor: pointer;
+// }
+// .close:before {
+//     content: '+';
+//     color: #337AB7;
+//     position: absolute;
+//     z-index: 2;
+//     transform: rotate(45deg);
+//     font-size: 50px;
+//     line-height: 1;
+//     top: -5px;
+//     left: 6px;
+//     transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+// }
+// .close:after {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 100%;
+//     background: #337AB7;
+//     z-index: 1;
+//     transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+//     transform: scale(0.01);
+// }
+// .close:hover:after {
+//     transform: scale(1);
+// }
+// .close:hover:before {
+//     transform: scale(0.8) rotate(45deg);
+//     color: #fff;
+// }
