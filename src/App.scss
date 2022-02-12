@@ -46,7 +46,7 @@
     animation-duration: 1s;
     // animation-delay: 1s;
     cursor: pointer;
-    border-color: #6d76c7 !important;
+    // border-color: #6d76c7 !important;
     box-shadow: 0 14px 28px rgba(201, 53, 144, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -55,8 +55,8 @@
     top: -4px;
     left: -4px;
     box-shadow: 0 0 0 2px #42d23d inset, 0 0 0 4px white inset;
-    border-color: #2e3469 !important;
-    background: #2e3469 !important;
+    border-color: #e754af !important;
+    background: #7279b8 !important;
     box-shadow: 0 14px 28px rgba(53, 201, 115, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -94,14 +94,14 @@
 }
 
 #table2 :hover {
-    // background-color: rgba(230, 173, 204, 0.418);
+    background-color: rgba(230, 173, 204, 0.418);
 }
 
 #table3 {
     width: 0;
     height: 0;
     border-top: 40px solid transparent;
-    border-right: 80px solid lightblue;
+    border-right: 80px solid rgb(192, 79, 115);
     border-bottom: 40px solid transparent;
 }
 
