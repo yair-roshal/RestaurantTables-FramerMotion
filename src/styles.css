@@ -75,17 +75,26 @@
   }
   
   .card-list {
+	width: 1000px;
+	height: 400px;
+
 	display: flex;
 	flex-wrap: wrap;
-	align-content: flex-start;
-  }
+	/* align-content: flex-start; */
+
+     /* flex-direction: row; */
+     flex-direction: column;
+   }
   
   .card {
+	
 	position: relative;
-	padding: 25px;
+	padding: 15px;
 	height: 160px;
-	flex: 0 0 40%;
-	max-width: 40%;
+
+	/* flex: 0 0 40%; */
+	/* max-width: 40%; */
+	/* width: 150px; */
   }
   
   /* .card:nth-child(4n + 1),
@@ -152,7 +161,17 @@
 	left: 0;
 	overflow: hidden;
 	height: 420px;
-	width: 100vw;
+	width: 92vw;
+  }
+  .card-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	height: 420px;
+	width: 700px;
+	/* width: 100vw; */
+
   }
   
   .open .card-image-container,
@@ -190,10 +209,13 @@
 	will-change: opacity;
 	top: 0;
 	bottom: 0;
+
+	
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
-	max-width: 990px;
+	
+	/* max-width: 990px; */
   }
   
   .overlay a {
@@ -201,9 +223,10 @@
 	position: fixed;
 	top: 0;
 	bottom: 0;
+
+
 	width: 100vw;
-	left: 50%;
-  
+	left: 50%; 
 	transform: translateX(-50%);
   }
   

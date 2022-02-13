@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export function List({ selectedId }) {
     return (
-        <ul className="card-list">
+        <div className="card-list">
             {items.map((card) => (
                 <Card
                     key={card.id}
@@ -13,13 +13,14 @@ export function List({ selectedId }) {
                     isSelected={card.id === selectedId}
                 />
             ))}
-        </ul>
+        </div>
     );
 }
 
-function Card({ id, capacity, title, category, theme }) {
+function Card({ id, capacity, title, category   }) {
     return (
-        <li className={`card ${theme}`}>
+        <div className={`card  `}>
+
             <div className="card-content-container">
                 <motion.div
                     className="card-content"
@@ -41,14 +42,12 @@ function Card({ id, capacity, title, category, theme }) {
                         layoutId={`title-container-${id}`}
                     >
                         <span className="category">{category}</span>
-                        <h2>{title}</h2>
-                        <h2>{id}</h2>
-
+                        <h5>{title}</h5>
+                        <h5>{id}</h5>
                     </motion.div>
-
                 </motion.div>
             </div>
             <Link to={id} className={`card-open-link`} />
-        </li>
+        </div>
     );
 }
