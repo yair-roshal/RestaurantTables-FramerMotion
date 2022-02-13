@@ -15,7 +15,7 @@ export function List({ selectedId }) {
   );
 }
 
-function Card({ id, title, category, theme }) {
+function Card({ id, capacity, title, category, theme }) {
   return (
     <li className={`card ${theme}`}>
       <div className="card-content-container">
@@ -24,7 +24,7 @@ function Card({ id, title, category, theme }) {
             className="card-image-container"
             layoutId={`card-image-container-${id}`}
           >
-            <img className="card-image" src={`images/${id}.jpg`} alt="" />
+            <img className="card-image" src={`images/${capacity}.jpg`} alt="" />
           </motion.div>
           <motion.div
             className="title-container"

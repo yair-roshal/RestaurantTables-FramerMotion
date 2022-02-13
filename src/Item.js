@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { items } from './data'
 
 export function Item({ id }) {
-    const { category, title } = items.find((item) => item.id === id)
+    const { capacity,category, title } = items.find((item) => item.id === id)
 
     return (
         <>
@@ -30,7 +30,7 @@ export function Item({ id }) {
                     >
                         <img
                             className="card-image"
-                            src={`images/${id}.jpg`}
+                            src={`images/${capacity}.jpg`}
                             alt=""
                         />
                     </motion.div>
