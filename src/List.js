@@ -3,6 +3,18 @@ import { items } from "./data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+
+
+export function List({ selectedId }) {
+  return (
+    <ul className="card-list">
+      {items.map(card => (
+        <Card key={card.id} {...card} isSelected={card.id === selectedId} />
+      ))}
+    </ul>
+  );
+}
+
 function Card({ id, title, category, theme }) {
   return (
     <li className={`card ${theme}`}>
@@ -25,15 +37,5 @@ function Card({ id, title, category, theme }) {
       </div>
       <Link to={id} className={`card-open-link`} />
     </li>
-  );
-}
-
-export function List({ selectedId }) {
-  return (
-    <ul className="card-list">
-      {items.map(card => (
-        <Card key={card.id} {...card} isSelected={card.id === selectedId} />
-      ))}
-    </ul>
   );
 }

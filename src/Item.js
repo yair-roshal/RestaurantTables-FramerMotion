@@ -42,6 +42,7 @@ export function Item({ id }) {
                         <h2>{title}</h2>
                     </motion.div>
                     <motion.div className="content-container" animate>
+                        
                         <LoremIpsum
                             p={6}
                             avgWordsPerSentence={6}
