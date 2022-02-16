@@ -1,9 +1,10 @@
-import React from "react";
-import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import { Header } from "./Header";
-import { Item } from "./Item";
-import { List } from "./List";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
+import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
+import { Header } from './Header';
+import { Item } from './Item';
+import { List } from './List';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Logic } from './Logic';
 
 function Store({ match }) {
   let { id } = match.params;
@@ -19,13 +20,14 @@ function Store({ match }) {
   );
 }
 
-export   function App() {
+export function App() {
   return (
     <div className="container">
       <AnimateSharedLayout type="crossfade">
+        <Logic />
         <Header />
         <Router>
-          <Route path={["/:id", "/"]} component={Store} />
+          <Route path={['/:id', '/']} component={Store} />
         </Router>
       </AnimateSharedLayout>
     </div>
