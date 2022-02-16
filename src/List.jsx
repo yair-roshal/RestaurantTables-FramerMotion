@@ -5,20 +5,23 @@ import { motion } from 'framer-motion';
 
 import { tablesStore } from './Logic';
 import { toJS } from 'mobx';
+import { observer } from 'mobx-react';
 
-
-// useEffect(() => {
-//   console.log('TablesStore.tables  :>> ', tablesStore.tables )
-// }, []);
-
-let tables = tablesStore.tables;
-console.log('...tables :>> ', toJS( tables )  );
-
+ 
+ console.log('...tables 2222', toJS( tablesStore.tables )  );
+ 
 export function List({ selectedId }) {
+  const [tables, setTables] = React.useState(tablesStore.tables);
+
+  useEffect(() => {
+    console.log('TablesStore.tables  :>> ', toJS( tablesStore.tables ) )
+    setTables( tablesStore.tables ) 
+  },[tablesStore.tables] );
+
   return (
     <div className="card-list">
-      {items.map((card) => (
-        <Card key={card.id} {...card} isSelected={card.id === selectedId} />
+      { tables.map((card,index) => (
+         <Card key={index} {...card} isSelected={card.id === selectedId} />
       ))}
     </div>
   );
@@ -53,3 +56,4 @@ function Card({ id, capacity, title, category }) {
     </div>
   );
 }
+export default observer(List);
