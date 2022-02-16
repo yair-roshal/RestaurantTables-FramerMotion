@@ -4,18 +4,19 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import { tablesStore } from './Logic';
+import { toJS } from 'mobx';
+
 
 // useEffect(() => {
 //   console.log('TablesStore.tables  :>> ', tablesStore.tables )
 // }, []);
 
-let tables =  tablesStore.tables 
+let tables = tablesStore.tables;
+console.log('...tables :>> ', toJS( tables )  );
 
 export function List({ selectedId }) {
   return (
     <div className="card-list">
-  {console.log('...tables :>> ', {...tables} )} 
- 
       {items.map((card) => (
         <Card key={card.id} {...card} isSelected={card.id === selectedId} />
       ))}
