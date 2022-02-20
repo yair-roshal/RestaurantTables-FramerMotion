@@ -1,11 +1,11 @@
-import {useState,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import { items } from './data';
 import { makeAutoObservable } from 'mobx';
 import { observer } from 'mobx-react';
 import { toJS } from 'mobx';
 
-console.log('...items :>> ', items);
+// console.log('...items :>> ', items);
 
 class TablesStore {
   _tables = items;
@@ -21,13 +21,13 @@ class TablesStore {
     return this._tables;
   }
 
-  deleteTable() { 
+  deleteTable() {
     this._tables.splice(1, 1);
     return this._tables;
   }
   addTable() {
-    let elem ={ "Table": 102, "Diners": 1, "Concat": [101, 103] }
-    this._tables.splice(1,0,elem);
+    let elem = { Table: 102, Diners: 1, Concat: [101, 103] };
+    this._tables.splice(1, 0, elem);
     return this._tables;
   }
 
@@ -39,11 +39,11 @@ class TablesStore {
 export const tablesStore = new TablesStore();
 
 export const Logic = observer(function PersistenLogic() {
-  const [seconds, setSeconds] =  useState(2);
-  const [timerActive, setTimerActive] =  useState(false);
-  const [tables, setTables] =  useState(items);
+  const [seconds, setSeconds] = useState(2);
+  const [timerActive, setTimerActive] = useState(false);
+  const [tables, setTables] = useState(items);
 
-   useEffect(() => {
+  useEffect(() => {
     if (seconds > 0 && timerActive) {
       setTimeout(setSeconds, 1000, seconds - 1);
     } else {
@@ -53,8 +53,8 @@ export const Logic = observer(function PersistenLogic() {
 
   function SearchFreeTable() {
     // tablesStore.setTablesClass();
-    tablesStore.deleteTable() ;
-    tablesStore.addTable() ;
+    tablesStore.deleteTable();
+    tablesStore.addTable();
     setSeconds(2);
     console.log('...tables1111 ', toJS(tablesStore.tables));
 
@@ -73,7 +73,7 @@ export const Logic = observer(function PersistenLogic() {
 
   return (
     <div className="buttonStart">
-      {seconds ? (
+      {/* {seconds ? (
         <>
           <Button
             variant="contained"
@@ -86,7 +86,7 @@ export const Logic = observer(function PersistenLogic() {
         </>
       ) : (
         SearchFreeTable()
-      )}
+      )} */}
     </div>
   );
 });

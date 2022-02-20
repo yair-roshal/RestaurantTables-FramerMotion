@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { items } from './data';
+// import { items } from './data';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 

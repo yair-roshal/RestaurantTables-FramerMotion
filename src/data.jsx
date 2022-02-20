@@ -73,8 +73,6 @@ export const items = [
     Concat: [401],
   },
 
-
-  
   {
     id: '501',
     capacity: '5',
