@@ -1,3 +1,0 @@
- 
-export {Mana} from "./Mana"
- 
