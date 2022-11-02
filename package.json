@@ -1,5 +1,5 @@
 {
-    "name": "tables",
+    "name": "restaurant-tables",
     "version": "7.7.0",
     "private": false,
     "dependencies": {
